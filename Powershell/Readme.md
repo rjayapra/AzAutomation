@@ -1,7 +1,7 @@
 ## Azure Runbook Automation to start/stop AKS cluster using Azure Automation Powershell Script
 
 ### How to Use It
-####1. Create an Azure Automation Account
+#### 1. Create an Azure Automation Account
 Create an Azure Automation Account through Azure Portal.
 
 Make sure that the 'Create Azure Run As account' flag is active
@@ -20,10 +20,10 @@ After that, hit Save and Publish.
 
 Next, create a new Runbook called AKS Stop and do the same process, but this time using the StopCluster.ps1 file(Don't forget to change the script with your AKS values), then again, hit Save and Publish.
 
-####4. Test your Script
+#### 4. Test your Script
 The next step is to test if the script is running fine, go first to the AKS Stop Runbok and hit Start, check if any errors are shown in the logs and if your AKS Cluster is now in the Stopped/Stopping State.
 
 Now, go to the AKS Start Runbook and hit Start, check if any errors are shown in the logs and if your cluster is now on the Running/Starting state.
 
-####5. Create your Schedules
+#### 5. Create your Schedules
 If you want to create an schedule to automatically Start/Stop your cluster go to the Schedule tab in your Azure Automation Account and Create a new Schedules, after that go to your Runbooks and Link them to your schedules.

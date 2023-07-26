@@ -6,12 +6,12 @@ Create an Azure Automation Account through Azure Portal.
 
 Make sure that the 'Create Azure Run As account' flag is active
 
-####2. Give the Automation Account the proper permissions
+#### 2. Give the Automation Account the proper permissions
 Once your Automation account is created with the flag 'Create Azure Run As account' a new Service Principal will be created with the same name of your Automation Account plus a unique hash.
 
 You should give Contributor permissions for this Service Principal in the AKS Clusters that you want to start/stop
 
-####3. Create your Runbooks
+#### 3. Create your Runbooks
 Open your newly created Azure Automation account > Go to the Runbooks Tab and create a new 'Powershell Runbook' called AKS Start. In your Runbook details page, click edit to open the editor and paste the contents of the StartCluster.ps1 file.
 
 In the line 4, change the parameters and fill the values with your AKS Service Name, AKS Service Resource Group and AKS Service Subscription. You can add multiple lines to Start/Stop multiple clusters.
